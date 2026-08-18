@@ -30,7 +30,7 @@ A lightweight and automated HTTP proxy fetcher that updates your proxy list ever
 2. The GitHub Actions workflow will **automatically enable** and start running
 3. Access the proxy list at:
    ```
-   https://raw.githubusercontent.com/YOUR_USERNAME/Proxy-Fetcher/main/proxies.txt
+   https://raw.githubusercontent.com/sayanpal514-hue/Proxy-Fetcher/main/live.txt
    ```
 
 ### Option 2: Clone & Run Locally
@@ -52,7 +52,7 @@ python main.py
 ### Download Proxies with cURL
 
 ```bash
-curl https://raw.githubusercontent.com/YOUR_USERNAME/Proxy-Fetcher/main/proxies.txt -o proxies.txt
+curl https://raw.githubusercontent.com/sayanpal514-hue/Proxy-Fetcher/main/live.txt
 ```
 
 ### Download with Python
@@ -190,7 +190,7 @@ ip:port
 
 Make sure to replace `YOUR_USERNAME` with your actual GitHub username:
 ```
-https://raw.githubusercontent.com/YOUR_USERNAME/Proxy-Fetcher/main/proxies.txt
+https://raw.githubusercontent.com/sayanpal514-hue/Proxy-Fetcher/main/live.txt
 ```
 
 ## 🔄 Manual Trigger
@@ -262,7 +262,7 @@ For issues, questions, or suggestions:
 
 ```bash
 # Download and validate proxies
-curl https://raw.githubusercontent.com/YOUR_USERNAME/Proxy-Fetcher/main/proxies.txt | \
+curl https://raw.githubusercontent.com/sayanpal514-hue/Proxy-Fetcher/main/live.txt| \
 while read proxy; do
   curl -x "http://$proxy" https://httpbin.org/ip --max-time 5 && echo "✓ $proxy"
 done
