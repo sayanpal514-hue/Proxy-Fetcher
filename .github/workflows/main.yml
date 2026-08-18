@@ -1,4 +1,4 @@
-name: Update Hotstar Playlist
+name: Update Proxy
 on:
   schedule:
     - cron: '0 */3 * * *'
