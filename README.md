@@ -60,11 +60,11 @@ curl https://raw.githubusercontent.com/YOUR_USERNAME/Proxy-Fetcher/main/proxies.
 ```python
 import requests
 
-url = "https://raw.githubusercontent.com/YOUR_USERNAME/Proxy-Fetcher/main/proxies.txt"
+url = "https://raw.githubusercontent.com/sayanpal514-hue/Proxy-Fetcher/main/live.txt"
 response = requests.get(url)
 
 if response.status_code == 200:
-    with open('proxies.txt', 'w') as f:
+    with open('live.txt', 'w') as f:
         f.write(response.text)
     print("Proxies downloaded successfully!")
 else:
@@ -105,7 +105,7 @@ This project uses GitHub Actions to automate the proxy fetching process:
   1. Fetches proxy lists from multiple public sources
   2. Validates proxy connectivity
   3. Removes duplicates and dead proxies
-  4. Saves results to `proxies.txt`
+  4. Saves results to `live.txt`
   5. Auto-commits changes to the repository
 
 ### Proxy Sources
@@ -132,22 +132,6 @@ Proxy-Fetcher/
 
 ## ⚙️ Configuration
 
-### Customize Update Frequency
-
-Edit `.github/workflows/fetch-proxies.yml` and modify the schedule:
-
-```yaml
-schedule:
-  - cron: '0 */3 * * *'  # Every 3 hours
-```
-
-CRON Format: `minute hour day month day-of-week`
-
-Common examples:
-- `0 * * * *` → Every hour
-- `0 0 * * *` → Daily at midnight
-- `0 12 * * *` → Every day at noon
-- `0 */6 * * *` → Every 6 hours
 
 ### Customize Proxy Validation
 
@@ -159,7 +143,7 @@ Modify `main.py` to:
 
 ## 📊 Proxy Format
 
-The `proxies.txt` file contains proxies in the following format:
+The `live.txt` file contains proxies in the following format:
 
 ```
 ip:port
